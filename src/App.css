@@ -1,7 +1,13 @@
 #root {
-  max-width: 880px;
+  max-width: 90vw;
   margin: 0 auto;
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 p,
@@ -17,8 +23,17 @@ figure {
 }
 
 .std-img {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  max-width: 90vw;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#phong-diagram {
+  width: 400px;
+  max-width: 90vw;
+  height: auto;
 }
 
 figcaption {
@@ -30,7 +45,7 @@ figcaption {
 .variable-wrapper {
   text-align: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 #phong-components {
@@ -38,11 +53,90 @@ figcaption {
   text-align: center;
 }
 
-.variable-gifs {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
 .p {
   color: #888;
+}
+
+/* Small devices such as large phones (640px and up) */
+@media only screen and (min-width: 36em) {
+  #root {
+    width: 90vw;
+  }
+
+  .std-img {
+    width: 250px;
+    height: 250px;
+  }
+
+  #phong-diagram {
+    width: 500px;
+    max-width: 90vw;
+    height: auto;
+  }
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em) {
+  #root {
+    width: 600px;
+  }
+
+  .std-img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .variable-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #phong-diagram {
+    width: 650px;
+    max-width: 90vw;
+    height: auto;
+  }
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 64em) {
+  #root {
+    width: 880px;
+  }
+
+  .std-img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .variable-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #phong-diagram {
+    width: 750px;
+    max-width: 90vw;
+    height: auto;
+  }
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 80em) {
+  #root {
+    width: 880px;
+  }
+
+  .std-img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .variable-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+  }
 }

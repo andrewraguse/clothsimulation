@@ -253,6 +253,7 @@ function App() {
               src="diffuse-shading.gif"
               alt="Cloth colliding with a sphere."
             ></img>
+            <figcaption>Cloth colliding with a sphere</figcaption>
           </figure>
           <h4>Planes</h4>
           <p>
@@ -277,7 +278,7 @@ function App() {
               src="cloth-simulation-plane.gif"
               alt="Plane Collision"
             ></img>
-            <figcaption>Collision Plane</figcaption>
+            <figcaption>Cloth colliding with a plane</figcaption>
           </figure>
         </div>
         <div id="self-collisions">
@@ -442,10 +443,9 @@ function App() {
           </p>
           <figure id="phong-components">
             <img
+              id="phong-diagram"
               src="phong-shading.png"
               alt="Phong Shading Component"
-              width="auto"
-              height="200"
             />
           </figure>
           <p>
