@@ -52,43 +52,46 @@ function App() {
           its immediate left, right, top, and bottom neighbors. They ensure that
           point masses remain at consistent distances, preventing them from
           moving too close or too far from each other.
-          <br />
-          <br />
+        </p>
+        <figure>
           <img
-            src="placeholder.jpg"
+            className="std-img"
+            src="point-mass-and-springs-structural.png"
             alt="Description of Image"
-            width="300"
-            height="300"
           ></img>
-          <br />
-          <br />
+          <figcaption>Structural Constraints</figcaption>
+        </figure>
+        <p>
           <b>Shearing Springs:</b> To prevent the cloth from collapsing when
           pulled diagonally, we add diagonal springs between points and their
           diagonal neighbors. These springs provide stability and maintain the
           cloth’s shape when forces act in any direction.
-          <br />
-          <br />
+        </p>
+        <figure>
           <img
-            src="placeholder.jpg"
+            className="std-img"
+            src="point-mass-and-springs-shearing.png"
             alt="Description of Image"
-            width="300"
-            height="300"
           ></img>
-          <br />
-          <br />
+          <figcaption>These springs prevent the cloth from shearing</figcaption>
+        </figure>
+        <p>
           <b>Bending Springs:</b> These springs connect each point to its second
           neighbor in all directions (left, right, up, and down). They prevent
           the cloth from folding unnaturally by ensuring that the cloth bends
           smoothly, rather than creasing sharply.
-          <br />
-          <br />
-          <img
-            src="public/placeholder.jpg"
-            alt="Description of Image"
-            width="300"
-            height="300"
-          ></img>
         </p>
+        <figure>
+          <img
+            className="std-img"
+            src="point-mass-and-springs-bending.png"
+            alt="Description of Image"
+          ></img>
+          <figcaption>
+            Bending springs ensure that the cloth maintains its natural shape
+            and prevents any unnatural folding
+          </figcaption>
+        </figure>
       </div>
       <div id="simulation">
         <h2>Simulation</h2>
@@ -115,15 +118,17 @@ function App() {
           By incorporating these methods, we can simulate the realistic movement
           of cloth under various forces, achieving a balance between physical
           accuracy and computational stability.
-          <br />
-          <br />
-          <img
-            src="image_processing20201113-26407-x3vt9y.gif"
-            alt="Description of GIF"
-            width="300"
-            height="300"
-          />
         </p>
+        <figure>
+          <img
+            className="std-img"
+            src="cloth-simulation-standard.gif"
+            alt="Description of GIF"
+          />
+          <figcaption>
+            Without spatial hashing, the cloth moves through itself.
+          </figcaption>
+        </figure>
         <div id="variables">
           <h3>Variables</h3>
           <p>
@@ -139,19 +144,23 @@ function App() {
               exhibit slower movements. In contrast, low damping values allow
               the cloth to continue moving for a longer period, resulting in
               more dynamic and prolonged oscillations.
-              <div id="damping-gifs">
-                <img
-                  src="image_processing20201113-26407-x3vt9y.gif"
-                  alt="Description of GIF"
-                  width="300"
-                  height="300"
-                />
-                <img
-                  src="image_processing20201113-26407-x3vt9y.gif"
-                  alt="Description of GIF"
-                  width="300"
-                  height="300"
-                />
+              <div id="damping-gifs" className="variable-wrapper">
+                <figure>
+                  <img
+                    className="variable-gifs std-img"
+                    src="cloth-simulation-damping-.06.gif"
+                    alt="Low Damping GIF"
+                  />
+                  <figcaption>Low Damping (.06%)</figcaption>
+                </figure>
+                <figure>
+                  <img
+                    className="variable-gifs std-img"
+                    src="cloth-simulation-damping-.4.gif"
+                    alt="High Damping GIF"
+                  />
+                  <figcaption>High Damping (.4%)</figcaption>
+                </figure>
               </div>
             </li>
             <li>
@@ -162,19 +171,27 @@ function App() {
               substantial, weightier appearance and move more slowly, while a
               lower density cloth will appear lighter and more responsive to
               external forces.
-              <div id="density-gifs">
-                <img
-                  src="image_processing20201113-26407-x3vt9y.gif"
-                  alt="Description of GIF"
-                  width="300"
-                  height="300"
-                />
-                <img
-                  src="image_processing20201113-26407-x3vt9y.gif"
-                  alt="Description of GIF"
-                  width="300"
-                  height="300"
-                />
+              <div id="density-gifs" className="variable-wrapper">
+                <figure>
+                  <img
+                    className="variable-gifs std-img"
+                    src="cloth-simulation-low-density-5.gif"
+                    alt="Low Density GIF"
+                  />
+                  <figcaption>
+                    High Density (5 g/cm<sup>2</sup>)
+                  </figcaption>
+                </figure>
+                <figure>
+                  <img
+                    className="variable-gifs std-img"
+                    src="cloth-simulation-high-density-50.gif"
+                    alt="High Density GIF"
+                  />
+                  <figcaption>
+                    High Density (50 g/cm<sup>2</sup>)
+                  </figcaption>
+                </figure>
               </div>
             </li>
             <li>
@@ -188,19 +205,27 @@ function App() {
               more bouncy when disturbed. Conversely, a lower spring constant
               makes the springs more elastic, allowing for greater flexibility
               and smoother deformations.
-              <div id="spring-constant-gifs">
-                <img
-                  src="image_processing20201113-26407-x3vt9y.gif"
-                  alt="Description of GIF"
-                  width="300"
-                  height="300"
-                />
-                <img
-                  src="image_processing20201113-26407-x3vt9y.gif"
-                  alt="Description of GIF"
-                  width="300"
-                  height="300"
-                />
+              <div id="spring-constant-gifs" className="variable-wrapper">
+                <figure>
+                  <img
+                    className="variable-gifs std-img"
+                    src="cloth-simulation-low-spring-constant-100.gif"
+                    alt="Low Spring Constant GIF"
+                  />
+                  <figcaption>
+                    Low Spring Constant (k<sub>s</sub> = 100 N/m)
+                  </figcaption>
+                </figure>
+                <figure>
+                  <img
+                    className="variable-gifs std-img"
+                    src="cloth-simulation-high-spring-constant-10000.gif"
+                    alt="High Spring Constant GIF"
+                  />
+                  <figcaption>
+                    High Spring Constant (k<sub>s</sub> = 10000 N/m)
+                  </figcaption>
+                </figure>
               </div>
             </li>
           </ol>
@@ -222,12 +247,13 @@ function App() {
             method isn't perfectly physically accurate, it effectively simulates
             the frictional effects necessary for realistic cloth behavior.
           </p>
-          <img
-            src="image_processing20201113-26407-x3vt9y.gif"
-            alt="Description of GIF"
-            width="300"
-            height="300"
-          />
+          <figure>
+            <img
+              className="std-img"
+              src="diffuse-shading.gif"
+              alt="Cloth colliding with a sphere."
+            ></img>
+          </figure>
           <h4>Planes</h4>
           <p>
             For collisions with planes, the approach is slightly different since
@@ -245,12 +271,14 @@ function App() {
             interacts with spherical and planar objects, incorporating friction
             to add to the realism of the simulation.
           </p>
-          <img
-            src="image_processing20201113-26407-x3vt9y.gif"
-            alt="Description of GIF"
-            width="300"
-            height="300"
-          />
+          <figure>
+            <img
+              className="std-img"
+              src="cloth-simulation-plane.gif"
+              alt="Plane Collision"
+            ></img>
+            <figcaption>Collision Plane</figcaption>
+          </figure>
         </div>
         <div id="self-collisions">
           <h3>Self Collisions</h3>
@@ -306,13 +334,12 @@ function App() {
             O(n), making the simulation more efficient and scalable for larger
             cloth models.
           </p>
-          <div id="spatial-hashing-gifs">
+          <div className="variable-wrapper">
             <figure>
               <img
-                src="image_processing20201113-26407-x3vt9y.gif"
-                alt="Description of GIF"
-                width="300"
-                height="300"
+                className="std-img"
+                src="cloth-simulation-non-self-collisions.gif"
+                alt="No self collisions implemented"
               />
               <figcaption>
                 Without spatial hashing, the cloth moves through itself.
@@ -320,10 +347,9 @@ function App() {
             </figure>
             <figure>
               <img
-                src="image_processing20201113-26407-x3vt9y.gif"
-                alt="Description of GIF"
-                width="300"
-                height="300"
+                className="std-img"
+                src="cloth-simulation-selfCollisions.gif"
+                alt="Self Collisions Implemented"
               />
               <figcaption>
                 With spatial hashing implemented, the cloth folds over itself
@@ -331,10 +357,6 @@ function App() {
               </figcaption>
             </figure>
           </div>
-        </div>
-        <div id="wind">
-          <h3>Wind</h3>
-          <p>Not yet implemented.</p>
         </div>
       </div>
       <div id="shaders">
@@ -373,21 +395,11 @@ function App() {
           </p>
           <figure>
             <img
-              src="placeholder.jpg"
+              className="std-img"
+              src="diffuse-shading.gif"
               alt="Diffuse Shading Diagram"
-              width="300"
-              height="300"
             />
-            <figcaption>//FIXME Insert Diffuse Shading Equation</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="image_processing20201113-26407-x3vt9y.gif"
-              alt="Cloth Simulation using Diffuse Shading"
-              width="300"
-              height="300"
-            />
-            <figcaption>//FIXME Caption about diffuse shading</figcaption>
+            <figcaption>Diffuse Shading</figcaption>
           </figure>
         </div>
         <div id="phong-shading">
@@ -428,51 +440,26 @@ function App() {
             ambient—we achieve Phong shading, which provides a comprehensive
             representation of how light interacts with surfaces in a 3D scene.
           </p>
-          <div id="phong-shading-images">
-            <figure>
-              <img
-                src="image_processing20201113-26407-x3vt9y.gif"
-                alt="Diffuse Shading Component"
-                width="100"
-                height="100"
-              />
-              <figcaption>Diffuse Shading Component</figcaption>
-            </figure>
-            <p>+</p>
-            <figure>
-              <img
-                src="image_processing20201113-26407-x3vt9y.gif"
-                alt="Ambient Shading Component"
-                width="100"
-                height="100"
-              />
-              <figcaption>Ambient Shading Component</figcaption>
-            </figure>
-            <p>+</p>
-            <figure>
-              <img
-                src="image_processing20201113-26407-x3vt9y.gif"
-                alt="Specular Shading Component"
-                width="100"
-                height="100"
-              />
-              <figcaption>Specular Shading Component</figcaption>
-            </figure>
-            <p>=</p>
-            <figure>
-              <img
-                src="image_processing20201113-26407-x3vt9y.gif"
-                alt="Phong Shading"
-                width="100"
-                height="100"
-              />
-              <figcaption>Phong Shading</figcaption>
-            </figure>
-          </div>
+          <figure id="phong-components">
+            <img
+              src="phong-shading.png"
+              alt="Phong Shading Component"
+              width="auto"
+              height="200"
+            />
+          </figure>
           <p>
             Above, we can observe each individual shading component and how
             their combination results in a realistic shiny material effect.
           </p>
+          <figure>
+            <img
+              className="std-img"
+              src="phong-shading.gif"
+              alt="Phong Shading Diagram"
+            />
+            <figcaption>Phone Shading</figcaption>
+          </figure>
         </div>
         <div id="texture-mapping">
           <h3>Shader 3: Texture Mapping</h3>
@@ -489,12 +476,11 @@ function App() {
           </p>
           <figure>
             <img
-              src="image_processing20201113-26407-x3vt9y.gif"
+              className="std-img"
+              src="texture-mapping.gif"
               alt="Texture Mapping"
-              width="100"
-              height="100"
             />
-            <figcaption>//FIXME CAPTION</figcaption>
+            <figcaption>Texture Mapping (w/ Phong Shading)</figcaption>
           </figure>
         </div>
         <div id="bump-mapping">
@@ -526,12 +512,11 @@ function App() {
           </p>
           <figure>
             <img
-              src="image_processing20201113-26407-x3vt9y.gif"
+              className="std-img"
+              src="bump-mapping.gif"
               alt="Bump Mapping"
-              width="100"
-              height="100"
             />
-            <figcaption>//FIXME CAPTION</figcaption>
+            <figcaption>Bump Mapping</figcaption>
           </figure>
         </div>
         <div id="displacement-mapping">
@@ -544,12 +529,11 @@ function App() {
           </p>
           <figure>
             <img
-              src="placeholder.jpg"
+              className="std-img"
+              src="bump-mapping-edges.png"
               alt="Smooth Sphere Edge"
-              width="100"
-              height="100"
             />
-            <figcaption>//FIXME CAPTION</figcaption>
+            <figcaption>Bump Mapping Edge</figcaption>
           </figure>
           <p>
             To overcome this limitation, we implement displacement mapping. This
@@ -562,12 +546,11 @@ function App() {
           </p>
           <figure>
             <img
-              src="placeholder.jpg"
+              className="std-img"
+              src="displacement-mapping-edges.png"
               alt="Bumpy Sphere Edge"
-              width="100"
-              height="100"
             />
-            <figcaption>//FIXME CAPTION</figcaption>
+            <figcaption>Displacement Mapping Edge</figcaption>
           </figure>
           <p>
             In the above texture-mapped object, we can observe that the edges of
@@ -576,12 +559,11 @@ function App() {
           </p>
           <figure>
             <img
-              src="image_processing20201113-26407-x3vt9y.gif"
+              className="std-img"
+              src="displacement-mapping.gif"
               alt="Displacement Map Shading"
-              width="100"
-              height="100"
             />
-            <figcaption>//FIXME</figcaption>
+            <figcaption>Displacement Mapping</figcaption>
           </figure>
         </div>
         <div id="environment-mapping">
@@ -602,12 +584,11 @@ function App() {
           </p>
           <figure>
             <img
-              src="image_processing20201113-26407-x3vt9y.gif"
+              className="std-img"
+              src="environment-mapping.gif"
               alt="Environment Map Shading"
-              width="100"
-              height="100"
             />
-            <figcaption>//FIXME</figcaption>
+            <figcaption>Environment Map Shading</figcaption>
           </figure>
         </div>
       </div>

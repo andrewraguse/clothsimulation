@@ -2,7 +2,45 @@
   max-width: 880px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
   text-align: left;
+}
+
+figure {
+  text-align: center;
+}
+
+.std-img {
+  width: 300px;
+  height: 300px;
+}
+
+figcaption {
+  font-size: 14px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.variable-wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+#phong-components {
+  margin-left: 10px;
+  text-align: center;
+}
+
+.variable-gifs {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .p {
